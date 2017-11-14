@@ -5,6 +5,7 @@ var path = require('path');
 var pg = require('pg');
 pg.defaults.ssl = true;
 var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHoHealth';
+console.log(conString);
 
 router.get('/', function(req, res, next){
 	res.sendFile(path.join(__dirname + '/../views/index.html'));
